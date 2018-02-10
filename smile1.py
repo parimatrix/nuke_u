@@ -1,9 +1,9 @@
 import cv2
 import numpy as np
 import sys
-
-facePath = "C:\\Users\\Cherub\\Downloads\\opencv\\sources\\data\\haarcascades_cuda\\haarcascade_frontalface_default.xml"
-smilePath = "C:\\Users\\Cherub\\Downloads\\opencv\\sources\\data\\haarcascades_cuda\\haarcascade_smile.xml"
+import datetime
+facePath = "./haarcascade_frontalface_default.xml"
+smilePath = "./haarcascade_smile.xml"
 faceCascade = cv2.CascadeClassifier(facePath)
 smileCascade = cv2.CascadeClassifier(smilePath)
 
@@ -15,9 +15,12 @@ sF = 1.05
 c=0
 
 
+starttime = datetime.datetime.now()
 while True:
-    print (c)
-    ret, frame = cap.read() 
+	endtime=datetime.datetime.now()
+	tdelta=datetime.strptime(s2,FMT) - datetime.strptime(s1,FMT)
+	print(tdelta)
+    ret, frame = cap.read()
     img = frame
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
@@ -52,7 +55,8 @@ while True:
     cv2.imshow('Smile Detector', frame)
     c = cv2.waitKey(7) % 0x100
     if c == 27:
-        break
+        break 
+	
 
 cap.release()
 cv2.destroyAllWindows()
