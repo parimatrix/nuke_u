@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+
+	<title>Blogs</title>
+    <link rel="shortcut icon" type="image/png" href="http://www.nsit.ac.in/static/images/societies/CSI.jpg"/>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/app.css">
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="ui fixed inverted menu">
+            <div class="ui container">
+               
+                <a href="/" class="item">Home</a>
+                 
+                <%if(currentUser){%>
+                    <a href="/logout" class="item float right">Logout</a>
+                <%}%>
+
+                <%if(!currentUser){%>
+                    <a href="/login" class="item float right">Login</a> 
+               <%}%>
+                
+            </div>
+        </div>
+       
+

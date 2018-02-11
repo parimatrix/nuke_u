@@ -1,0 +1,45 @@
+<% include partials/header.ejs%>
+
+<div id="hello" class="ui centered card">
+    <div class="image">
+        <img src=<%=user[0].dpUrl%>>
+    </div>
+    <div class="content">
+      <a href="<%=user[0].profileUrl%>" class="header"><%=user[0].name%></a>
+      <div class="meta">
+        <span class="date"><%=user[0].gender%></span>    
+      </div>
+        
+      <div class="description">
+            <span><%=user[0].hometown%></span>
+       dfgd
+      </div>
+    </div>
+    <div class="extra content">
+      <a>
+        <i class="user icon"></i>
+        22 Friends
+      </a>
+    </div>
+  </div>
+
+  <button id="py">Python Script</button>
+  <a href="/diabetes"><button id="nn">Diabetes</button></a> 
+  
+  <iframe width="640" height="360" src="https://www.youtube.com/embed/JxJsai5nkGI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <script>
+    $('#py').click(function(){
+    $.ajax({
+        url:'/run'
+    },function(data){
+      
+    })
+});
+
+// $('#nn').click(function(){
+//     $.ajax({
+//         url:'/diabetes'
+//     })
+// })
+  </script>
+<% include partials/footer.ejs%>

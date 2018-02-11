@@ -1,0 +1,34 @@
+<% include partials/header.ejs%>
+
+<form action="/diabetes" method="POST">
+    <input type="text" placeholder="is heredity?">
+    <input type="text" placeholder="">
+</form>
+
+<div class="ui main text container segment">
+        <div class="ui huge header">New Blog</div>
+        <form class="ui form" action="/diabetes" method="POST">
+            <div class="field">
+                <label>Is hereditary</label>
+                <input type="text" name="heredity" >
+            </div>
+            <div class="field">
+                <label>Age</label>
+                <input name="age"></input>
+            </div>
+
+            <div class="field">
+                    <label>Overweight</label>
+                    <input name="overweight"></input>
+            </div>
+
+            <div class="field">
+                    <label>Prediabetic</label>
+                    <input name="prediabeic"></input>
+            </div>
+    
+            <input class="ui violet big basic button" type="submit">
+        </form>
+    </div>
+
+<% include partials/footer.ejs%>
