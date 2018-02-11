@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Medical Data Pricing</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+	<script type="text/javascript" scr="blockchain.js"></script>
+	<script type="text/javascript" src="calc_price.js">	</script>
+</head>
+<body>
+<h1>
+	Medical Data Blockchain
+</h1>
+
+<p>
+	Currently we have 100 Medical Records
+	<br>
+	Would you like to access some records ?
+</p>
+
+<input placeholder = "Name" id = "name">
+<input placeholder = "Number of records" id="number">
+<button id="buy" type="submit">Buy Records</button>
+
+<h2 id="current_price">
+	Current price: 
+</h2>
+
+<div id="transactions">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Trading Data</title>
+	<link href="css/trading.css" rel="stylesheet">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+	<script type="text/javascript" scr="blockchain.js"></script>
+	<script type="text/javascript" src="calc_price.js">	</script>
+</head>
+<body>
+<div id="last">
+    <h1>Help us to help you with your data.</h1>
+    <div class="mycards">
+    	Buy Data
+    	<br>
+    	<input class="myinput" id="num_records" placeholder="Number of Records">
+    	<input class="myinput" id="aadhar" placeholder="Aadhar Card Number">
+    	<br>
+    	<span id="checks">
+    	<input type="checkbox" name="vehicle" value="Asia">Asia
+		<input type="checkbox" name="vehicle" value="Africa">Africa
+		<input type="checkbox" name="vehicle" value="USA">USA
+		<input type="checkbox" name="vehicle" value="Australia">Australia
+    	<br>
+    	
+    	</span>
+    	<button type="submit" id="request"> Place request </button>
+
+    </div>
+    <div class="mycards">Upload your Data</div>
+<h1 id="curr_price">Current Price : </h1>
+</div>
+
+
+
+</body>
+</html>

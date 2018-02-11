@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Raleway');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway';
+    overflow-x: hidden;
+}
+#header {
+    width:100%;
+    height: 100px;
+    font-family: Lato;
+}
+#header h1 {
+    display: inline-block;
+    color: #003B4A;
+    font-size: 2em;
+    padding: 10px 25px;
+    vertical-align: top;
+}
+#header ul {
+    float: right;
+    list-style: none;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+#header ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+#header ul li a{
+    color: #033B4A;
+    text-decoration: none;
+}
+.green_button {
+    background-color: #01C98F;
+    border-radius: 20px;
+}
+.green_button a {
+    color: #fff;
+}
+#last {
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #00D6A3;
+    color: #033B4A;
+    font-size: 1.2em;
+    padding-top: 1vh;
+}
+#get_started {
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin-top: 50px;
+    color: #033B4A;
+    cursor: pointer;
+}
+.mycards {
+    vertical-align: top;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    margin: 15px 50px;
+    border-radius: 5px;
+    width: 350px;
+    min-height: 200px;
+    display: inline-block;
+    color: #033B4A;
+    font-size: 1.5em;
+    padding: 5px 10px;
+}
+.myinput {
+    /*font-family: 'Montserrat', sans-serif;*/
+    padding: 10px 20px;
+    font-size: 20px;
+    background: #E1E2E6;
+    border: none;
+    color: #8F8C00;
+    text-align: center;
+    min-width: 250px;
+    margin: 10px 0;
+}
+#request {
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: #033B4A;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 25px;
+    padding: 10px 20px;
+}
+#checks {
+    font-size: .7em;
+}
+#mychart {
+    -webkit-transform: scale(.8);
+}

@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Trading Data</title>
+	<link href="css/trading.css" rel="stylesheet">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>-->
+	<script type="text/javascript" src="calc_price.js">	</script>
+
+</head>
+<body>
+<nav>
+    <div style="position:absolute;" id="header">
+        <img style="margin-top: 15px;padding-left: 10px" src="img/logo.jpg">
+        <h1>TEAM C</h1>
+        <ul>
+            <li><a href="trading.html">Trading</a></li>
+            <li><a href="#">Nav Tab 2</a></li>
+            <li><a href="#">Nav Tab 3</a></li>
+            <li class="green_button" id="register"><a href="#">Register Now</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div id="last">
+    <h1 style="padding-top: 10vh;">Help us to help you with your data.</h1>
+    <div class="mycards">
+    	Buy Data
+    	<br>
+    	<input class="myinput" id="num_records" placeholder="Number of Records">
+    	<input class="myinput" id="aadhar" placeholder="Aadhaar Card Number">
+    	<br>
+    	<span id="checks">
+    	<input type="checkbox" name="vehicle" value="Asia">Asia
+		<input type="checkbox" name="vehicle" value="Africa">Africa
+		<input type="checkbox" name="vehicle" value="USA">USA
+		<input type="checkbox" name="vehicle" value="Australia">Australia
+    	<br>
+    	</span>
+        <span id="cost">
+
+        </span>
+        <button type="submit" id="get_bill"> Calculate Cost </button>
+    	<button type="submit" id="request"> Confirm Order </button>
+
+    </div>
+    <div class="mycards">
+        Share your Data
+
+        <input class="myinput" id="num_records_upload" placeholder="Number of Records">
+        <input class="myinput" id="Disease" placeholder="Disease">
+        <span id="cost_upload">
+
+        </span>
+        <button type="submit" id="get_bill_upload"> Calculate Cost </button>
+        <button type="submit" id="request_upload"> Confirm Data upload </button>
+
+    </div>
+<h1 id="curr_price">Current Price : </h1>
+    <br>
+    <center>
+    </center>
+</div>
+
+<canvas id="myChart"></canvas>
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+</body>
+</html>
+
+<!--
+starttime = datetime.datetime.now()
+while(true)
+{
+....
+endtime = datetime.datetime.now()
+tdelta = datetime.strptime(s2, FMT) - datetime.strptime(s1, FMT)
+if(tdelta.seconds == 300)
+    break ;
+}
+-->
