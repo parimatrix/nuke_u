@@ -4,6 +4,8 @@ $(function() {
     var base_price = 50;
     var new_price = base_price;
 
+    var base_balance = 100;
+    var new_balance = base_balance;
     $('#get_bill').click(function () {
         $('#cost').html('');
         $('#cost').append("Calculated Cost = " + new_price*parseInt($('#num_records').val()) + '<br>');
@@ -24,7 +26,12 @@ $(function() {
 		$('#curr_price').html('');
 		$('#curr_price').append("Current Price: " + new_price);
 
-		$.get('/insert_price?price=' + new_price,function (data) {
+        $('#balance').html('');
+        new_balance = new_balance + 0.1 * num_records;
+        $('#balance').append("Balance : " + new_balance);
+
+
+        $.get('/insert_price?price=' + new_price,function (data) {
            console.log("inserted price");
         });
 
@@ -42,7 +49,11 @@ $(function() {
         new_price = new_price + inc ;
 
         $('#curr_price').html('');
-        $('#curr_price').append("Current Price: " + new_price);
+        $('#curr_price').append("Current Price: $" + new_price);
+
+        $('#balance').html('');
+        new_balance = new_balance - 0.1 * num_records;
+        $('#balance').append("Balance : $" + new_balance);
 
         $.get('/insert_price?price=' + new_price,function (data) {
             console.log("inserted price");
@@ -61,7 +72,7 @@ $(function() {
     var prices = [10,20];
     $.get('/get_prices',function (data) {
         prices = JSON.parse(data);
-        $('#curr_price').append()
+        $('#curr_price').append(prices[prices.length-1]);
         var chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'line',
@@ -73,7 +84,7 @@ $(function() {
                     label: "MediCoin Price Chart for February",
                     backgroundColor: 'rgb(255, 99, 132)',
                     borderColor: 'rgb(255, 99, 132)',
-                    data: [50,50.2,50.1,49.6,50.4,50.3,50],
+                    data: prices,
                 }]
             },
 

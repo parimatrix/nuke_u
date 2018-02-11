@@ -6,6 +6,7 @@ const fs = require('fs');
 const app = express();
 const port = 2500;
 const SHA256 = require("crypto-js/sha256");
+var path = require('path');
 
 var blockchain = [{
     "name" : "nuke_u",
@@ -14,7 +15,25 @@ var blockchain = [{
     "prev_hash" : 0,
     "curr_hash" : 42
 }];
-var price = [50];
+var price = [50,50.2];
+fs.exists('price.txt', function(exists) {
+    if (exists) {
+        // do something
+        fs.readFile('price.txt' , function (err, data) {
+            if(err) throw err;
+            price = JSON.parse(data);
+            console.log("started blockchain in file");
+        });
+    }
+    else
+    {
+        fs.writeFile('price.txt' , JSON.stringify(price), function (err) {
+            if(err) throw err;
+            console.log("started price in file");
+        });
+    }
+
+});
 fs.writeFile('blockchain.txt' , JSON.stringify(blockchain), function (err) {
     if(err) throw err;
     console.log("started blockchain in file");
@@ -29,6 +48,7 @@ app.use('/',express.static('public'));
 app.get('/get_prices',function (req,res) {
    res.send(JSON.stringify(price));
 });
+
 app.get('/insert_price',function (req,res) {
    var x = parseFloat(req.query.price);
    price.push(x);
