@@ -17,3 +17,8 @@ The diseases we target are : Parkinson's Disease ( where we track the hand vibra
 ![alt text](https://github.com/parimatrix/nuke_u/blob/finance_system/readme_img/Screenshot%20(102).png)
 ### Price Chart of MediCoin
 ![alt text](https://github.com/parimatrix/nuke_u/blob/finance_system/readme_img/Screenshot%20(104).png)
+### Parkinson's Disease Hand Tracking Game
+![alt text](https://github.com/parimatrix/nuke_u/blob/finance_system/readme_img/parkinson.png)
+### Asperger's Syndrome Smile tracking
+![alt text](https://github.com/parimatrix/nuke_u/blob/finance_system/readme_img/aspergers.png)
+
