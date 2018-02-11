@@ -68,12 +68,12 @@ $(function() {
 
             // The data for our dataset
             data: {
-                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                labels: ["01", "02", "03", "04", "05", "06", "08"],
                 datasets: [{
-                    label: "MediCoin Price Chart",
+                    label: "MediCoin Price Chart for February",
                     backgroundColor: 'rgb(255, 99, 132)',
                     borderColor: 'rgb(255, 99, 132)',
-                    data: prices,
+                    data: [50,50.2,50.1,49.6,50.4,50.3,50],
                 }]
             },
 
